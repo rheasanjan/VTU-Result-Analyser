@@ -1,0 +1,474 @@
+
+<!doctype html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title> Form </title>
+</head>
+<style>
+body {
+  background-image: "bg.jpg";
+
+}
+.buttongroup .bn {
+  border: 1px solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    font-family: Georgia;
+  background-color: #660066;
+
+  cursor: pointer;
+}
+ .bn:hover {
+    background-color: red; /* Green */
+    color: white;
+    border-color: black;
+
+}
+div.formclass {
+  padding: 50px 300px 100px 400px;
+
+}
+div.borderclass {
+  width: 600px;
+  color: white;
+
+  height: 450px;
+  /*border: 2px solid black;*/
+  padding-left: 50px;
+  border-radius: 5px;
+}
+
+h3 {
+  padding: 30px;
+}
+h2 {
+  padding:100px 0px 30px 150px;
+  color: white;
+  font-family:monospace;
+}
+h4 {
+  font-size: 16px;
+
+
+}
+#buttongroup{
+  padding: 100px;
+
+}
+.button {
+    border: 1px solid black;
+    color: white;
+    padding: 15px 50px 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    font-family: Georgia;
+    width: 370px;
+    background-color: #660066;
+    cursor: pointer;
+
+}
+.button:hover {
+  background-color: #8080ff; /* Green */
+  color: black;
+  border-color: black;
+
+}
+
+</style>
+<body background = "bg.jpg">
+
+  <div class="buttongroup">
+
+    <h2> Select the Semester: </h2>
+    <center>
+
+  <button class="bn" onclick="dispFirst()"> First sem  </button>
+  <button class="bn" onclick="dispSecond()"> Second sem  </button>
+  <button class="bn" onclick="dispThird()"> Third sem  </button>
+  <button class="bn" onclick="dispFourth()"> Fourth sem  </button>
+  <button class="bn" onclick="dispFifth()"> Fifth sem  </button>
+  <button class="bn" onclick="dispSixth()"> Sixth sem  </button>
+  <button class="bn" onclick="dispSeven()"> Seventh sem  </button>
+  <button class="bn" onclick="dispEight()"> Eighth sem  </button>
+
+</div>
+</center>
+
+
+  <div class ="formclass" id="formspace" >
+
+</div>
+<script>
+
+function dispFirst() {
+  document.getElementById("formspace").innerHTML = `<div class="borderclass"><h3> First Semester </h3><form action="firstsem1.cgi" name = "sem1form" method="POST" onsubmit="return validateFirst()" >
+  <div class="form-group row">
+    <div class="col-xs-8">
+    <label> Enter Starting USN :</label>
+    <input type="text" class="form-control" id='ex2' name ="usn1"/>
+  </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-xs-8">
+    <label for="usn2">Enter Ending USN: </label>
+    <input type="text" class="form-control" name="usn2"/>
+  </div>
+  </div>
+
+  <button type="submit" class="button">Submit</button>
+  </form>
+  </div>`
+}
+
+
+function dispFifth() {
+  document.getElementById("formspace").innerHTML = ` <div class="borderclass"><h3> Fifth Semester </h3> <form action="fifthsem1.cgi" method="POST" name="sem5form" onsubmit="return validateFifth()">
+  <div class="form-group row">
+    <div class="col-xs-4">
+    <label> Enter Starting USN :</label>
+    <input type="text" class="form-control" id='ex2' name ="usn1"/>
+  </div>
+
+    <div class="col-xs-4">
+    <label for="usn2">Enter Ending USN: </label>
+    <input type="tetx" class="form-control" name="usn2"/>
+  </div>
+  </div>
+  <div class="form-group row">
+  <div class="col-xs-4">
+  <label>Enter Starting Diploma USN: </label>
+  <input type="text" class="form-control" name="dip_usn1"/>
+</div>
+<div class="col-xs-4">
+<label>Enter Ending Diploma USN: </label>
+<input type="tetx" class="form-control" name="dip_usn2"/>
+</div>
+  </div>
+  <button type="submit" class="button">Submit</button>
+  </form>
+  </div>
+  `
+}
+
+function dispThird() {
+  document.getElementById("formspace").innerHTML = `<div class="borderclass"><h3> Third Semester </h3><form action="thirdsem2.cgi" method="POST" name="sem3form" onsubmit="return validateThird()">
+  <div class="form-group row">
+    <div class="col-xs-4">
+    <label> Enter USN1 :</label>
+    <input type="text" class="form-control" id='ex2' name ="usn1"/>
+  </div>
+
+    <div class="col-xs-4">
+    <label for="usn2">Enter USN2: </label>
+    <input type="tetx" class="form-control" name="usn2"/>
+  </div>
+  </div>
+  <div class="form-group row">
+  <div class="col-xs-4">
+  <label>Enter Diploma USN1: </label>
+  <input type="text" class="form-control" name="dip_usn1"/>
+</div>
+<div class="col-xs-4">
+<label>Enter Diploma USN2: </label>
+<input type="tetx" class="form-control" name="dip_usn2"/>
+</div>
+  </div>
+  <button type="submit" class="button">Submit</button>
+  </form>
+  </div>`
+}
+
+
+function dispSeven() {
+  document.getElementById("formspace").innerHTML = `<div class="borderclass"><h3> Seventh Semester </h3><form action="sevensem7_graph.cgi" method="POST" name="sem7form" >
+  <div class="form-group row">
+    <div class="col-xs-4">
+    <label> Enter USN1 :</label>
+    <input type="text" class="form-control" id='ex2' name ="usn1"/>
+
+  </div>
+
+    <div class="col-xs-4">
+    <label for="usn2">Enter USN2: </label>
+    <input type="text" class="form-control" name="usn2"/>
+  </div>
+  </div>
+  <div class="form-group row">
+  <div class="col-xs-4">
+  <label>Enter Diploma USN1: </label>
+  <input type="text" class="form-control" name="dip_usn1"/>
+</div>
+<div class="col-xs-4">
+<label>Enter Diploma USN2: </label>
+<input type="tetx" class="form-control" name="dip_usn2"/>
+</div>
+  </div>
+  <button type="submit" class="button">Submit</button>
+  </form>
+  </div>`
+}
+
+function dispEight() {
+  document.getElementById("formspace").innerHTML = "<div class=borderclass><h4> No results available for this semester yet </h4> </div> "
+
+}
+function dispSecond() {
+  document.getElementById("formspace").innerHTML = "<div class=borderclass><h4> No results available for this semester yet </h4> </div> "
+
+}
+function dispFourth() {
+  document.getElementById("formspace").innerHTML = "<div class=borderclass><h4> No results available for this semester yet </h4> </div> "
+
+}
+function dispSixth() {
+  document.getElementById("formspace").innerHTML = "<div class=borderclass><h4> No results available for this semester yet </h4> </div> "
+
+}
+
+function validateFirst() {
+  var usn1 = document.forms["sem1form"]["usn1"].value;
+  var usn2 = document.forms["sem1form"]["usn2"].value;
+  sub1 = usn1.substring(0,7);
+  sub2 = usn2.substring(0,7);
+  var coll1 = usn1.substring(0,3);
+  var coll2 = usn2.substring(0,3);
+  var re = new RegExp('^[1][A-Z]{2}[1][7][CS|ME|EE|EC|BT|CV]');
+  var res1= re.test(sub1);
+  var res2 = re.test(sub2);
+
+
+  if (sub1 != sub2){
+    alert ("Starting USN and ending USN are not of the same semester/branch");
+    return false;
+  }
+  else if( res1 == false || res2 == false) {
+    alert ("USN is invalid!!!");
+    return false;
+  }
+
+  // else if((sub1 != "1SG17CS" && sub1 != "1SG17ME" && sub1 != "1SG17EE" && sub1 != "1SG17EC" && sub1 != "1SG17BT" && sub1 != "1SG17CV") || (sub2 != "1SG17CS" && sub2 != "1SG17ME" && sub2 != "1SG17EE" && sub2 != "1SG17EC" && sub2 != "1SG17BT" && sub2 != "1SG17CV")) {
+  //   alert ("USN is invalid");
+  //   return false;
+  // }
+  else if ((usn1.len < 10 ) || (usn2.len <  10)) {
+     alert("USN must have 10 characetres");
+     return false;
+   }
+   else if ((usn1.len > 10 ) || (usn2.len >  10)) {
+      alert("USN must have 10 characetres");
+      return false;
+    }
+}
+function validateThird() {
+  var usn1 = document.forms["sem3form"]["usn1"].value;
+  var usn2 = document.forms["sem3form"]["usn2"].value;
+  var dip1 = document.forms["sem3form"]["dip_usn1"].value;
+  var dip2 = document.forms["sem3form"]["dip_usn2"].value;
+  var sub1 = usn1.substring(0,7);
+  var sub2 = usn2.substring(0,7);
+  var subd1 = dip1.substring(0,8);
+  var subd2 = dip2.substring(0,8);
+  var coll1 = usn1.substring(0,3);
+  var coll2 = usn2.substring(0,3);
+  var colld1 = dip1.substring(0,3);
+  var colld2 = dip2.substring(0,3);
+
+  var re = new RegExp('^[1][A-Z]{2}[1][6][CS|ME|EE|EC|BT|CV]');
+  var red = new RegExp('^[1][A-Z]{2}[1][7][CS|ME|EE|EC|BT|CV]');
+  var res1= re.test(sub1);
+  var res2 = re.test(sub2);
+  var resd1 = red.test(subd1);
+  var resd2 = red.test(subd2);
+
+
+
+
+  if (sub1 != sub2){
+    alert ("Starting USN and ending USN are not of the same semester/branch");
+    return false;
+  }
+  else if (subd1 != subd2){
+    alert ("Starting diploma USN and ending diploma USN are not of the same semester/branch");
+    return false;
+  }
+  else if( coll1 != colld1 || coll1 != colld2 || coll2 != colld1 || coll2 != colld2 ) {
+    alert("Diploma USNs are not from the same college!")
+    return false;
+  }
+
+  else if( res1 == false || res2 == false) {
+    alert ("USN is invalid!!!");
+    return false;
+  }
+
+  else if( resd1 == false || resd2 == false) {
+    alert (" Diploma USN is invalid!!!");
+    return false;
+  }
+  // else if((sub1 != "1SG16CS" && sub1 != "1SG16ME" && sub1 != "1SG16EE" && sub1 != "1SG16EC" && sub1 != "1SG16BT" && sub1 != "1SG16CV") || (sub2 != "1SG16CS" && sub2 != "1SG16ME" && sub2 != "1SG16EE" && sub2 != "1SG16EC" && sub2 != "1SG16BT" && sub2 != "1SG16CV")) {
+  //   alert ("USN is invalid");
+  //   return false;
+  // }
+  // else if((subd1 != "1SG17CS4" && subd1 != "1SG17ME4" && subd1 != "1SG17EE4" && subd1 != "1SG17EC4" && subd1 != "1SG17BT4" && subd1 != "1SG17CV4") || (subd2 != "1SG17CS4" && subd2 != "1SG17ME4" && subd2 != "1SG17EE4" && subd2 != "1SG17EC4" && subd2 != "1SG17BT4" && subd2 != "1SG17CV4")) {
+  //   alert ("USN is invalid");
+  //   return false;
+  // }
+
+
+  else if ((usn1.len < 10 ) || (usn2.len <  10) || (dip1.len<10) || (dip2.len < 10)) {
+     alert("USN must have 10 characetres");
+     return false;
+   }
+   else if ((usn1.len > 10 ) || (usn2.len >  10)  || (dip1.len>10) || (dip2.len > 10)) {
+      alert("USN must have 10 characetres");
+      return false;
+    }
+}
+function validateFifth() {
+  var usn1 = document.forms["sem5form"]["usn1"].value;
+  var usn2 = document.forms["sem5form"]["usn2"].value;
+  var dip1 = document.forms["sem5form"]["dip_usn1"].value;
+  var dip2 = document.forms["sem5form"]["dip_usn2"].value;
+  var sub1 = usn1.substring(0,7);
+  var sub2 = usn2.substring(0,7);
+
+  var subd1 = dip1.substring(0,8);
+  var subd2 = dip2.substring(0,8);
+  var coll1 = usn1.substring(0,3);
+  var coll2 = usn2.substring(0,3);
+  var colld1 = dip1.substring(0,3);
+  var colld2 = dip2.substring(0,3);
+
+  var re = new RegExp('^[1][A-Z]{2}[1][5][CS|ME|EE|EC|BT|CV]');
+  var red = new RegExp('^[1][A-Z]{2}[1][6][CS|ME|EE|EC|BT|CV]');
+  var res1= re.test(sub1);
+  var res2 = re.test(sub2);
+  var resd1 = red.test(subd1);
+  var resd2 = red.test(subd2);
+
+  if (sub1 != sub2){
+    alert ("Starting USN and ending USN are not of the same semester/branch");
+    return false;
+  }
+  else if (subd1 != subd2){
+    alert ("Starting diploma USN and ending diploma USN are not of the same semester/branch");
+    return false;
+  }
+  else if( coll1 != colld1 || coll1 != colld2 || coll2 != colld1 || coll2 != colld2 ) {
+    alert("Diploma USNs are not from the same college!")
+    return false;
+  }
+
+  else if( res1 == false || res2 == false) {
+    alert ("USN is invalid!!!");
+    return false;
+  }
+
+  else if( resd1 == false || resd2 == false) {
+    alert ("USN is invalid!!!");
+    return false;
+  }
+
+
+
+  // else if((sub1 != "1SG15CS" && sub1 != "1SG15ME" && sub1 != "1SG15EE" && sub1 != "1SG15EC" && sub1 != "1SG15BT" && sub1 != "1SG15CV") || (sub2 != "1SG15CS" && sub2 != "1SG15ME" && sub2 != "1SG15EE" && sub2 != "1SG15EC" && sub2 != "1SG15BT" && sub2 != "1SG15CV")) {
+  //   alert ("USN is invalid");
+  //   return false;
+  // }
+  // else if((subd1 != "1SG16CS4" && subd1 != "1SG16ME4" && subd1 != "1SG16EE4" && subd1 != "1SG16EC4" && subd1 != "1SG16BT4" && subd1 != "1SG16CV4") || (subd2 != "1SG16CS4" && subd2 != "1SG16ME4" && subd2 != "1SG16EE4" && subd2 != "1SG16EC4" && subd2 != "1SG16BT4" && subd2 != "1SG16CV4")) {
+  //   alert ("USN is invalid");
+  //   return false;
+  // }
+
+
+  else if ((usn1.len < 10 ) || (usn2.len <  10) || (dip1.len<10) || (dip2.len < 10)) {
+     alert("USN must have 10 characetres");
+     return false;
+   }
+   else if ((usn1.len > 10 ) || (usn2.len >  10)  || (dip1.len>10) || (dip2.len > 10)) {
+      alert("USN must have 10 characetres");
+      return false;
+    }
+}
+
+function validateSeven() {
+  var usn1 = document.forms["sem7form"]["usn1"].value;
+  var usn2 = document.forms["sem7form"]["usn2"].value;
+  var dip1 = document.forms["sem7form"]["dip_usn1"].value;
+  var dip2 = document.forms["sem7form"]["dip_usn2"].value;
+  var sub1 = usn1.substring(0,7);
+  var sub2 = usn2.substring(0,7);
+  var subd1 = dip1.substring(0,8);
+  var subd2 = dip2.substring(0,8);
+  var coll1 = usn1.substring(0,3);
+  var coll2 = usn2.substring(0,3);
+  var colld1 = dip1.substring(0,3);
+  var colld2 = dip2.substring(0,3);
+
+  var re = new RegExp('^[1][A-Z]{2}[1][5][CS|ME|EE|EC|BT|CV]');
+  var red = new RegExp('^[1][A-Z]{2}[1][6][CS|ME|EE|EC|BT|CV]');
+  var res1= re.test(sub1);
+  var res2 = re.test(sub2);
+  var resd1 = red.test(subd1);
+  var resd2 = red.test(subd2);
+
+
+
+  if (sub1 != sub2){
+    alert ("Starting USN and ending USN are not of the same semester/branch");
+    return false;
+  }
+  else if (subd1 != subd2){
+    alert ("Starting diploma USN and ending diploma USN are not of the same semester/branch");
+    return false;
+  }
+  else if( res1 == false || res2 == false) {
+    alert ("USN is invalid!!!");
+    return false;
+  }
+
+  else if( resd1 == false || resd2 == false) {
+    alert ("USN is invalid!!!");
+    return false;
+  }
+
+  // else if((sub1 != "1SG14CS" && sub1 != "1SG14ME" && sub1 != "1SG14EE" && sub1 != "1SG14EC" && sub1 != "1SG14BT" && sub1 != "1SG14CV") || (sub2 != "1SG14CS" && sub2 != "1SG14ME" && sub2 != "1SG14EE" && sub2 != "1SG14EC" && sub2 != "1SG14BT" && sub2 != "1SG14CV")) {
+  //   alert ("USN is invalid");
+  //   return false;
+  // }
+  // else if((subd1 != "1SG15CS4" && subd1 != "1SG15ME4" && subd1 != "1SG15EE4" && subd1 != "1SG15EC4" && subd1 != "1SG15BT4" && subd1 != "1SG15CV4") || (subd2 != "1SG15CS4" && subd2 != "1SG15ME4" && subd2 != "1SG15EE4" && subd2 != "1SG15EC4" && subd2 != "1SG15BT4" && subd2 != "1SG15CV4")) {
+  //   alert ("USN is invalid");
+  //   return false;
+  // }
+
+
+  else if ((usn1.len < 10 ) || (usn2.len <  10) || (dip1.len<10) || (dip2.len < 10)) {
+     alert("USN must have 10 characetres");
+     return false;
+   }
+   else if ((usn1.len > 10 ) || (usn2.len >  10)  || (dip1.len>10) || (dip2.len > 10)) {
+      alert("USN must have 10 characetres");
+      return false;
+    }
+}
+
+</script>
+
+
+
+
+
+
+
+</body>
+</form>
