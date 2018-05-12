@@ -414,7 +414,7 @@ if __name__ == "__main__":
 
 
 
-    del sub_points
+    del sub_points #delete this
     res = '0'
     #end of for {for k in stu_data.keys()}
   htmlc1+= "</tr>"
