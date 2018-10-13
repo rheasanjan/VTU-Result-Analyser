@@ -1,5 +1,5 @@
 # VTU-Result-Analyser
-Author : Rhea Sanjan B.R
+# Author : Rhea Sanjan B.R
 
 Purpose: The purpose of this project is to automate the university result extraction process.
 In colleges, teachers have to sit and enter each student’s University Seat Number,fetch the result and determine if the student has passed or failed. 
